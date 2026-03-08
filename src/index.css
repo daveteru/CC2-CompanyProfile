@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.herogradient {
+  background: #b0e4e8;
+  background: linear-gradient(
+    90deg,
+    rgba(176, 228, 232, 1) 0%,
+    rgba(176, 228, 232, 1) 49%,
+    rgba(255, 199, 56, 1) 49%,
+    rgba(255, 199, 56, 1) 100%
+  );
+}
+
+.herogradient2 {
+  background: #f0d6f6;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 214, 246, 1) 0%,
+    rgba(240, 214, 246, 1) 49%,
+    rgba(168, 50, 113, 1) 62%,
+    rgba(168, 50, 113, 1) 100%
+  );
+}

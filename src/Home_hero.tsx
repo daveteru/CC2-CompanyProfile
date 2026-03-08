@@ -1,8 +1,8 @@
 export default function Home_hero() {
   return (
-    <div className="bg-linear-to-r from-[#B0E4E8] to-[#FFC738]">
+    <div className="herogradient">
       <header className="relative w-screen h-[95vh] rounded-b-[75px]  overflow-hidden">
-        <div className="w-full h-full flex justify-end flex-col  gap-3 px-20 py-10 ">
+        <div className="w-full h-full flex justify-end flex-col gap-3 px-10 container mx-auto py-10 ">
             <img
           className="absolute inset-0 w-full h-full object-cover"
           src="src/assets/hero1.webp"
@@ -22,9 +22,6 @@ export default function Home_hero() {
             </p>
           </div>
         </div>
-        {/* 
-       
-        */}
       </header>
     </div>
   );

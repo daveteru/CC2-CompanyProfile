@@ -5,12 +5,17 @@ import { RouterProvider } from "react-router/dom";
 
 import "./index.css";
 import Home from "./Home";
+import Services from "./Services";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
   },
+    {
+    path: "/services",
+    element: <Services/>,
+  }
 ]);
 
 createRoot(document.getElementById("root")!).render(
