@@ -1,6 +1,8 @@
-import overviewhero from "./assets/bg_over.webp";
-import Button1 from "./components/Button1";
+
 import Mainvet from "./components/Mainvet";
+import cucu from "./assets/drh_cucu.jpg"
+import bambang from "./assets/drh_bambang.jpg"
+import sri from "./assets/drh_sri.jpg"
 
 export default function Aboutus_team() {
   return (
@@ -18,6 +20,7 @@ export default function Aboutus_team() {
                   small animal clinical practice. Born in Cikampek in 1959, she
                   graduated from the Faculty of Veterinary Medicine at IPB University
                   in 1982."
+          imgurl={cucu}
         />
         <Mainvet
           name="drh. Sri Redjeki Rotoro"
@@ -26,6 +29,7 @@ export default function Aboutus_team() {
           desc=" drh. Sri Redjeki Rotoro, MM (drh. Toro) is a senior vet at PDHB drh. Cucu Kartini S. Since 1992, 
           she has specialized in Exotic, Internal, and Feline Medicine. She is a recognized expert in treating 
           'non-traditional' pets and complex feline cases."
+          imgurl={sri}
         />
         <Mainvet
           name="drh. Bambang Agus Sulistyo"
@@ -36,6 +40,7 @@ export default function Aboutus_team() {
                   small animal clinical practice. Born in Cikampek in 1959, she
                   graduated from the Faculty of Veterinary Medicine at IPB University
                   in 1982."
+                  imgurl={bambang}
         />
       </section>
     </div>

@@ -14,7 +14,7 @@ export default function Blogs_content() {
           drh. Cucu.
         </p>
       </div>
-      <div className="container grid grid-cols-3 gap-5 mx-auto my-20">
+      <div className="container grid grid-cols-3 gap-5 mx-auto my-20 px-15">
         <Blogcard/>
         <Blogcard/>
         <Blogcard/>

@@ -4,7 +4,7 @@ export default function Aboutus_story() {
   return (
     <div className="w-screen h-fit bg-[#F0D6F6]">
       <section className="w-screen h-200 grid grid-cols-2 container mx-auto overflow-clip">
-        <div className="w-full h-full py-20 px-10">
+        <div className="w-full h-full py-20 px-15">
           <h1 className="font-[Borel] text-[48px] text-[#323F51]">
             Inspirasi di Balik Kemajuan Kedokteran Hewan Indonesia
           </h1>

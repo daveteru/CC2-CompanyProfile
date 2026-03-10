@@ -2,6 +2,7 @@ import overviewhero from "./assets/bg_over.webp";
 import polaroid2 from "./assets/polaroid2.png";
 import paw from "./assets/paw.png";
 import homeIllust from "./assets/home-illust.png";
+import { Link } from "react-router";
 
 export default function Home_overview() {
   return (
@@ -30,9 +31,10 @@ export default function Home_overview() {
             untuk layanan maternity, ophthalmology, dan klinik khusus kucing,
             serta cabang di Green Garden dan satelit di Alam Sutera.
           </p>
-          <button className="w-fit h-fit p-4 bg-[#A83271] rounded-full text-white hover:bg-white hover:text-[#A83271] transition">
-            TENTANG KAMI
-          </button>
+<Link to="/about">
+            <button className="w-fit  rounded-full px-5 py-2 border-2 cursor-pointer bg-white hover:bg-[#A83271] hover:text-white font-bold drop-shadow-[0px_8px_0px_rgba(94,29,63,1)]   active:translate-y-2 active:drop-shadow-none transition-all">TENTANG TEAM KAMI</button>
+  
+</Link>
         </article>
       </section>
     </div>

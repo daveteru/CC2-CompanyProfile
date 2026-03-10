@@ -9,6 +9,8 @@ import "./index.css";
 import Services from "./Services";
 import Teams from "./Teams";
 import Blogs from "./Blogs";
+import Blogs_login from "./Blogs_login";
+import Blogs_create from "./Blogs_create";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <Blogs />,
+  },
+  {
+    path: "/blogs_admin_login",
+    element: <Blogs_login />,
+  },
+  {
+    path: "/blogscreate",
+    element: <Blogs_create />,
   },
 ]);
 

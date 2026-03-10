@@ -1,13 +1,19 @@
+import video from "./assets/test_video.mp4"
+
 export default function Home_hero() {
   return (
     <div className="herogradient">
       <header className="relative w-screen h-[95vh] rounded-b-[150px]  overflow-hidden">
         <div className="w-full h-full flex justify-end flex-col gap-3 px-10 container mx-auto py-10 ">
-            <img
+            <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
+              <source src={video} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
+            {/* <img
           className="absolute inset-0 w-full h-full object-cover"
           src="src/assets/hero1.webp"
           alt="Hero Background"
-        />
+        /> */}
           <h1 className="font-[Borel] text-7xl w-[600px] leading-22 text-white z-2">
             We treat your pet like family.
           </h1>

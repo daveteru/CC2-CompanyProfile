@@ -33,7 +33,7 @@ export default function Teams_employee() {
           drh. Cucu.
         </p>
       </div>
-      <div className="container grid grid-cols-3 gap-5 mx-auto my-10">
+      <div className="container grid grid-cols-3 gap-5 mx-auto my-10 px-15">
         {employees.map((emp: any, index: number) => (
           <Teamcard
             key={index}

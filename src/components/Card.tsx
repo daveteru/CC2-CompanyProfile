@@ -12,7 +12,7 @@ interface cardprops {
 
 export default function Card({ name, petname, breed,age, desc, tindakan,img }: cardprops) {
   return (
-    <div>
+    <div className="items-center justify-center flex">
       {" "}
       <div className="bg-[#FFFFFF] w-100 h-150 rounded-3xl overflow-hidden  flex flex-col  text-[#323F51]">
           <div className="w-full h-120  bg-amber-300 overflow-hidden ">

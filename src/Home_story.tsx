@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Home_story() {
   return (
     <div className="w-screen h-fit herogradient">
@@ -12,7 +14,7 @@ export default function Home_story() {
             berpengalaman serta fasilitas pelayanan medis yang lengkap. Kami
             memerikan layanan terbaik untuk hewan kesayangan anda
           </p>
-          <button className="border rounded-full border-blue-400 px-5 py-2 cursor-pointer hover:bg-blue-700 hover:text-white transition-colors">CEK SERVICE KAMI</button>
+          <Link to="/services"><button className="border rounded-full border-blue-400 px-5 py-2 cursor-pointer bg-white hover:bg-blue-400 hover:text-white font-bold drop-shadow-[0px_8px_0px_rgba(25,118,210,1)]   active:translate-y-2 active:drop-shadow-none transition-all">CEK SERVICE KAMI</button></Link>
         </article>
         <article className="relative w-full h-200 bg-[#FFC738] flex flex-col justify-center items-center p-12 gap-10 overflow-hidden">
           <div className="max-full h-150 bg-gray-400 rounded-4xl overflow-hidden">

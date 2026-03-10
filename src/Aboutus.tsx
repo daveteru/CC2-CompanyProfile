@@ -16,7 +16,6 @@ export default function Aboutus() {
       <Aboutus_team/>
       <Aboutus_culture/>
       <Aboutus_gallery/>
-      <Contact_whatsapp/>
       <Footer/>
     </div>
   );
