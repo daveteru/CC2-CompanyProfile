@@ -1,25 +1,22 @@
-import overviewhero from "./assets/bg_over.webp";
-import polaroid2 from "./assets/polaroid2.png";
-import paw from "./assets/paw.png";
-import homeIllust from "./assets/home-illust.png";
+import culturehero from "./assets/aboutus_culture.webp";
 
-export default function Home_overview() {
+export default function Aboutus_culture() {
   return (
-    <div className="w-screen h-fit bg-[#F0D6F6] p-10">
+    <div className="w-screen h-fit bg-[#B0E4E8] ">
       <section className="w-screen h-fit grid grid-cols-2 container mx-auto ">
-        <article className="w-full h-200  flex justify-center items-center text-center flex-col p-5 gap-10">
-          <div className="bg-gray-400 w-full h-full rounded-4xl overflow-hidden ">
+        <article className="w-full h-200  flex justify-center items-center text-center flex-col">
+          <div className="bg-gray-400 w-full h-full overflow-hidden ">
             <img
-              src={overviewhero}
+              src={culturehero}
               className="object-cover h-full w-full "
             ></img>
           </div>
         </article>
         <article className="relative w-full h-200  flex flex-col justify-between items-left p-12 gap-10 overflow-hidden">
           <p className="font-[Borel] text-5xl w-100 text-[#323F51]">
-            klinik hewan pertama yang beroperasi 24 jam
+            Bergabung menjadi keluarga PDHB. drh.Cucu!
           </p>
-          <p className="font-[inter] w-100 text-sm font-medium text-[#323F51]">
+          <p className="font-[inter] w-100 text-[14px] font-light text-[#323F51]">
             Cucu Kartini menyelesaikan pendidikan dokter hewan di Fakultas
             Kedokteran Hewan Institut Pertanian Bogor (FKH IPB) pada tahun 1982.
             Pada tahun berikutnya, bersama dengan Prof Drh Dondin Sajuthi, PhD,
@@ -30,7 +27,7 @@ export default function Home_overview() {
             untuk layanan maternity, ophthalmology, dan klinik khusus kucing,
             serta cabang di Green Garden dan satelit di Alam Sutera.
           </p>
-          <button className="w-fit h-fit p-4 bg-[#A83271] rounded-full text-white hover:bg-white hover:text-[#A83271] transition">
+          <button className="w-fit h-fit p-4 bg-blue-700 rounded-full text-white hover:bg-white hover:text-[#A83271] transition">
             TENTANG KAMI
           </button>
         </article>

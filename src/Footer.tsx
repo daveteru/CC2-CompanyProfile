@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
 <div className="w-screen bg-[#A83271] ">
-        <div className="flex justify-between container mx-auto w-screen h-85 bg-[#A83271] p-10">
+        <div className="flex justify-between container mx-auto w-screen h-50 bg-[#A83271] p-10">
           <div className="flex gap-10">
             <img src="src/assets/logo_white.png" alt="" className="h-[50px]" />
             <p className="text-white font-medium w-100">

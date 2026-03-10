@@ -6,8 +6,9 @@ import specialist_icon from "./assets/specialist_icon.png";
 
 export default function Home_USP() {
   return (
-    <div className="h-150 justify-center flex flex-col relative mt-30 ">
-      <div className="container mx-auto relative z-5 h-fit flex p-10 gap- text-center">
+    <div className="h-150 justify-center flex flex-col relative mt-30 items-center">
+      <h1 className="font-[Borel] text-[32px] relative z-5">Jasa Perawatan Kami</h1>
+      <div className="container mx-auto relative z-5 h-fit flex p-10 gap- text-center text-sm">
         <div className="w-100 h-full flex flex-col gap-5">
           <div className="h-[50%] w-full  p-5 flex items-center justify-center">
             <img src={vaccineicon} alt="" />

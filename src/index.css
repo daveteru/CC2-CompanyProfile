@@ -21,3 +21,18 @@
     rgba(168, 50, 113, 1) 100%
   );
 }
+
+.blogcardhover:hover hr{
+  border-color: #A83271;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.blogcardhover hr{
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blogcardhover{
+  cursor: pointer;
+}
