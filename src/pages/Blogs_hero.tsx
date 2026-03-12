@@ -10,7 +10,7 @@ export default function Blogs_hero() {
             src={hero}
             alt="Hero Background"
           />
-          <h1 className="font-[Borel] text-7xl w-[600px] leading-22 text-red-100 z-2">
+          <h1 className="font-[Borel]  mb-10 leading-10 text-4xl md:text-7xl lg:mx-15 lg:w-[600px] md:leading-22 text-red-100 z-2">
             Journals & Information
           </h1>
         </div>

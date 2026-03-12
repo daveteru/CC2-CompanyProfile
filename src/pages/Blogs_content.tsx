@@ -24,7 +24,7 @@ export default function Blogs_content({blogs}: { blogs:any[]}) {
       <div className="container grid grid-cols-3 gap-5 mx-auto my-20 px-25">
         {blogs.map((blog : any)=>(
           <Blogcard 
-          blogid={blog.id}
+          blogid={blog.objectId}
           title={blog.title}
           author={blog.author}
           bodytext={blog.bodytext}
