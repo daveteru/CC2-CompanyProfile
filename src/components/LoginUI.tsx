@@ -1,35 +1,52 @@
 import { Link, useNavigate } from "react-router";
 import loginillus from "../assets/login_illus.png";
 import { useState } from "react";
+import { useAuth } from "../store/store";
 
 export default function LoginUI() {
-    interface userDBtype{
-        id:number,
-        email: string,
-        password: string,
-        role: "user" | "admin"
+  interface userDBtype {
+    id: number;
+    email: string;
+    name: string;
+    password: string;
+    role: "user" | "admin";
+  }
+
+  const userDB: userDBtype[] = [
+    {
+      id: 1,
+      email: "budi@mail.com",
+      name: "Budi",
+      password: "budi123",
+      role: "user",
+    },
+    {
+      id: 2,
+      email: "siti@mail.com",
+      name: "Siti",
+      password: "siti123",
+      role: "admin",
+    },
+  ];
+
+  const movepage = useNavigate();
+  const { login } = useAuth();
+
+  function checkUser() {
+    const matchresult = userDB.find(
+      (e) => e.email === email && e.password === pass,
+    );
+    if (matchresult) {
+      login(matchresult.role, matchresult.name);
+      alert(`login Success ${matchresult.role}`);
+      movepage("/blogscreate");
+    } else {
+      alert("Email or Password is Wrong");
     }
+  }
 
-    const userDB : userDBtype[] = [
-        {id:1,email:"budi@mail.com" , password:"budi123" , role:"user"},
-        {id:2,email:"siti@mail.com" , password:"siti123" , role:"admin"}
-    ]
-
-    const movepage = useNavigate()
-
-    function checkUser(){
-        const matchresult = userDB.find((e)=> e.email === email && e.password === pass)
-        if (matchresult){
-            alert(`login Success ${matchresult.role}`)
-            movepage("/blogscreate")
-        }else{
-            alert("Email or Password is Wrong")
-        }
-    }
-
-    const [email,setEmail] = useState("")
-    const [pass,setPass] = useState("")
-
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
 
   return (
     <div className="w-screen h-165 flex justify-center pb-40">
@@ -44,7 +61,10 @@ export default function LoginUI() {
         <div className="flex flex-col justify-center">
           <fieldset className="flex flex-col">
             <div className="flex flex-col mb-5">
-              <label htmlFor="email" className="text-xl text-red-700 font-[Borel]">
+              <label
+                htmlFor="email"
+                className="text-xl text-red-700 font-[Borel]"
+              >
                 Email
               </label>
               <input
@@ -52,11 +72,19 @@ export default function LoginUI() {
                 id="email"
                 name="email"
                 value={email}
-                onChange={(e)=>(setEmail(e.target.value))}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    checkUser();
+                  }
+                }}
                 className="bg-red-200 rounded-md h-10 p-5"
               ></input>
             </div>
-            <label htmlFor="pass" className="text-xl  text-red-700  font-[Borel]">
+            <label
+              htmlFor="pass"
+              className="text-xl  text-red-700  font-[Borel]"
+            >
               Password
             </label>
             <input
@@ -64,16 +92,22 @@ export default function LoginUI() {
               id="pass"
               name="pass"
               value={pass}
-              onChange={(e)=>(setPass(e.target.value))}
+              onChange={(e) => setPass(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  checkUser();
+                }
+              }}
               className="bg-red-200 rounded-md h-10 p-5"
             ></input>
-              <button className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none "
-              onClick={()=>{
-                 checkUser()
+            <button
+              className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none "
+              onClick={() => {
+                checkUser();
               }}
-              >
-                Login{" "}
-              </button>
+            >
+              Login{" "}
+            </button>
           </fieldset>
         </div>
       </div>

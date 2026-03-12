@@ -1,28 +1,34 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 export default function Createblogmodule() {
   const [body, setBody] = useState("");
 
   return (
-    <div className="w-screen h-screen flex justify-center container mx-auto">
-      <div className="w-200 h-200 my-20">
+    <div className="w-screen h-fit flex justify-center container mx-auto">
+      <div className="w-200 h-fit my-20 p-15 border-4 border-red-500 rounded-4xl bg-white drop-shadow-[0px_8px_0px_rgba(236,38,38,1)]">
         <fieldset className="flex flex-col">
           <div className="flex flex-col mb-5">
-            <label htmlFor="title" className="text-xl font-[Borel]">
+<Link to="/blogs">
+              <button className="h-10 w-fit mb-10 px-10 rounded-2xl bg-[#A83271] font-bold drop-shadow-[0px_8px_0px_rgba(94,29,63,1)] border-4 border-[#5E1D3F] text-white active:translate-y-2 active:drop-shadow-none transition-all">
+                BACK TO INDEX
+              </button>
+</Link>
+            <label htmlFor="title" className="text-md font-[inter]">
               Article Title
             </label>
             <input
               type="text"
               id="title"
               name="title"
-              className="border rounded-md h-10 p-5"
+              className="border border-gray-400 rounded-md h-10 p-5"
             ></input>
           </div>
           <div className="flex gap-5">
             <div className="flex  w-full gap-2 items-center ">
               <label
-                htmlFor="pass"
-                className="text-xl translate-y-2 font-[Borel]"
+                htmlFor="author"
+                className="text-md translate-y-2 font-[inter] justify-center flex h-full"
               >
                 Author
               </label>
@@ -30,46 +36,49 @@ export default function Createblogmodule() {
                 type="text"
                 id="author"
                 name="author"
-                className="border rounded-md w-full h-10 p-5"
+                className="border  border-gray-400 rounded-md w-full h-10 p-5"
               ></input>
             </div>
             <div className="flex w-full gap-2 items-center ">
               <label
-                htmlFor="pass"
-                className="text-xl translate-y-2 font-[Borel]"
+                htmlFor="date"
+                className="text-md translate-y-2 font-[inter] justify-center flex h-full"
               >
                 {" "}
                 Date
               </label>
               <input
                 type="Date"
-                id="author"
-                name="author"
-                className="border rounded-md h-10  w-full p-5"
+                id="date"
+                name="date"
+                className="border  border-gray-400 rounded-md h-10  w-full p-5"
               ></input>
             </div>
           </div>
-          <label htmlFor="pass" className="text-xl translate-y-2  mt-5 font-[Borel]">
+          <label
+            htmlFor="pass"
+            className="text-md translate-y-2  mt-5 font-[inter] items-center flex h-full "
+          >
             Body Text
           </label>
           <textarea
-            id="author"
-            name="author"
+            id="bodytext"
+            name="bodytext"
             value={body}
             onChange={(e) => setBody(e.target.value)}
-            className="border rounded-md w-full h-120 p-5 overflow-y-scroll resize-none"
+            className="border rounded-md  border-gray-400 w-full h-120 p-5 mt-5 overflow-y-scroll resize-none"
           ></textarea>
- <div className="flex gap-5">
-              <button className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none ">
-                Submit{" "}
-              </button>
-              <button
-                onClick={() => setBody("")}
-                className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none "
-              >
-                Clear{" "}
-              </button>
- </div>
+          <div className="flex gap-5">
+            <button className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none ">
+              Submit{" "}
+            </button>
+            <button
+              onClick={() => setBody("")}
+              className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none "
+            >
+              Clear{" "}
+            </button>
+          </div>
         </fieldset>
       </div>
     </div>

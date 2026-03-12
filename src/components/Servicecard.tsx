@@ -7,7 +7,7 @@ interface servicecardprops {
 export default function Servicecard({ title, desc, imgurl }: servicecardprops) {
   return (
     <div>
-      <div className="w-full h-200 bg-gray-50 font-[inter]">
+      <div className="w-full h-190 bg-gray-50 font-[inter]">
         <div className="h-[60%] bg-gray-100 overflow-hidden ">
           <img src={imgurl} alt="" className="object-cover w-full h-full object-center" />
         </div>
