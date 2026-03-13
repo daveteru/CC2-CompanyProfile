@@ -40,17 +40,17 @@ export default function Teamcard({title,firstname,lastname,imgurl,}: teamcardpro
 
   return (
     <div>
-      <div className="w-full h-90 rounded-3xl bg-amber-400 p-8 gap-7 flex font-[inter] overflow-hidden drop-shadow-[1px_10px_0px_rgba(239,156,62,1)]">
-        <div className="h-[40%] aspect-square  bg-red-200 rounded-full overflow-hidden">
-          <img src={imgurl} alt="" />
+      <div className="w-full  min-h-75 rounded-3xl bg-amber-400 p-8 gap-7 justify-between items-center md:items-start flex md:flex-row flex-col text-center md:text-left font-[inter] overflow-hidden drop-shadow-[1px_10px_0px_rgba(239,156,62,1)]">
+        <div className="w-20 h-20 md:w-40 md:h-40 lg:w-20 lg:h-20 bg-red-200 rounded-full overflow-hidden shrink-0 aspect-square">
+          <img src={imgurl} alt="" className="object-fit w-full h-full" />
         </div>
-        <div className="w-60 flex flex-col justify-between text-[#323F51]">
-          <div>
-            <h1 className="text-2xl w-70 ">
+        <div className="w-full flex flex-col justify-between text-[#323F51] h-full ">
+          <div className="flex flex-col items-center md:items-start">
+            <h1 className="text-2xl w-full ">
               {title} {firstname} {lastname}
             </h1>
             <hr className="w-5 my-2" />
-            <p className="text-sm">{teamData[random].role}</p>
+            <p className="text-sm mb-5">{teamData[random].role}</p>
           </div>
           <p>{teamData[random].desc}</p>
         </div>

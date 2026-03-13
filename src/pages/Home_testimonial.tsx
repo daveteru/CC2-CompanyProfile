@@ -30,8 +30,8 @@ const testimonials = [
 export default function Home_testimonial() {
   return (
     <div className="w-screen h-fit bg-[#FFFFFF] flex flex-col justify-center items-left py-10 my-20 container mx-auto">
-      <h1 className="font-[Borel] text-[44px] px-15 text-blue-700">Client Reviews</h1>
-      <section className="w-full h-fit flex flex-col md:flex-row gap-5 px-15  ">
+      <h1 className="font-[Borel] text-center text-[44px] px-1 mb-10 text-blue-700">Client Reviews</h1>
+      <section className="w-full h-fit flex flex-col lg:flex-row gap-5 px-15  ">
         {testimonials.map((t) => (
           <TestimonialCard key={t.name} name={t.name} location={t.location} review={t.review} />
         ))}

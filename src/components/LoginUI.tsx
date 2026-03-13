@@ -49,14 +49,14 @@ export default function LoginUI() {
   const [pass, setPass] = useState("");
 
   return (
-    <div className="w-screen h-165 flex justify-center pb-40">
-      <div className="h-full w-200 rounded-3xl bg-white p-10 grid grid-cols-2 gap-8 border-4 border-red-500 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] ">
-        <div className="flex flex-col justify-center items-center border-r border-red-300">
-          <h1 className="font-[Borel] text-3xl text-red-400">
+    <div className="w-screen h-165 flex justify-center pb-40 px-5 ">
+      <div className="h-fit min-h-120 w-200 rounded-3xl bg-white p-10 grid md:grid-cols-2 gap-8 border-4 border-red-500 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] ">
+        <div className="flex flex-col justify-center items-center md:border-r border-red-300">
+          <h1 className="font-[Borel] text-xl md:text-3xl text-red-400">
             {" "}
             welcome back !
           </h1>
-          <img src={loginillus} alt="" />
+          <img src={loginillus} alt="" className="stretch-0 aspect-auto w-50 md:w-70" />
         </div>
         <div className="flex flex-col justify-center">
           <fieldset className="flex flex-col">

@@ -5,11 +5,11 @@ import Card from "../components/Card";
 
 export default function Services_testi() {
   return (
-    <div className="w-screen h-220 bg-[#F0D6F6]">
+    <div className="w-screen h-fit bg-[#F0D6F6] pb-20">
        <h1 className="font-[Borel] text-[44px] text-blue-700 text-center pt-15 pb-10">
         Client Testimonials
       </h1>
-      <section className="w-screen h-150 grid grid-cols-3 container mx-auto  items-center px-15 mb-20">
+      <section className="w-screen h-fit grid lg:grid-cols-3 container mx-auto  items-center px-5 md:px-15 gap-5">
           <Card
           name="Marcella Ibeth"
           breed="Pomeranian"

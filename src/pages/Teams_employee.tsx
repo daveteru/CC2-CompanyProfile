@@ -22,8 +22,8 @@ export default function Teams_employee() {
   }, []);
 
   return (
-    <div className="w-screen">
-      <div className="my-25">
+    <div className="w-screen h-full">
+      <div className="my-20">
         <h1 className="font-[Borel] text-[44px] text-red-400 text-center">
           Team @ PDHB drh.Cucu
         </h1>
@@ -33,7 +33,7 @@ export default function Teams_employee() {
           drh. Cucu.
         </p>
       </div>
-      <div className="container grid grid-cols-3 gap-5 mx-auto my-10 px-15">
+      <div className="container grid  lg:grid-cols-3 gap-5 mx-auto px-5 md:px-15 pb-20">
         {employees.map((emp: any, index: number) => (
           <Teamcard
             key={index}

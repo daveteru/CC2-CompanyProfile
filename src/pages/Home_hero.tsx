@@ -4,7 +4,7 @@ export default function Home_hero() {
   const gotowhatsapp = ()=>{ window.location.href = 'http://wa.me/+628811059617'}
 
   return (
-    <div className="herogradient">
+    <div className=" bg-[#B0E4E8] herogradient">
       <header className="relative w-screen h-[95vh] rounded-b-[150px]  overflow-hidden">
         <div className="w-full h-full flex justify-end flex-col gap-3 px-10 container mx-auto py-10 ">
             <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
@@ -16,15 +16,15 @@ export default function Home_hero() {
           src="src/assets/hero1.webp"
           alt="Hero Background"
         /> */}
-          <h1 className="font-[Borel] text-7xl w-[600px] leading-22 text-white z-2">
+          <h1 className="font-[Borel]  text-4xl md:text-7xl md:text-left text-center md:w-[600px]  md:leading-22 text-white z-2">
             We treat your pet like family.
           </h1>
-          <div className="flex gap-6 items-center z-2">
-            <button className="w-fit h-fit p-4 bg-[#A83271] rounded-full text-white hover:bg-white hover:text-[#A83271] transition"
+          <div className="flex flex-col-reverse md:flex-row gap-6 items-center z-2 lg:mb-10">
+            <button className="w-fit h-fit p-4 bg-[#A83271] text-[12px] md:text-xl rounded-full text-white hover:bg-white hover:text-[#A83271] transition"
             onClick={gotowhatsapp}>
               BOOK AN APPOINTMENT
             </button>
-            <p className="w-[25%] text-white text-[12px] ">
+            <p className="md:text-left text-center md:w-[40%] lg:w-[25%] text-white text-[12px] ">
               PDHB drh. Cucu Kartini S. dkk memiliki dokter hewan dan staff yang
               berpengalaman serta fasilitas pelayanan medis yang lengkap. Kami
               memerikan layanan terbaik untuk hewan kesayangan anda

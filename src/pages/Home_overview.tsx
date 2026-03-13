@@ -3,9 +3,9 @@ import overviewhero from "../assets/bg_over.webp";
 
 export default function Home_overview() {
   return (
-    <div className="w-screen h-fit bg-[#F0D6F6] p-10">
-      <section className="w-screen h-fit grid md:grid-cols-2 container mx-auto ">
-        <article className="md:w-full w-[100%] md:h-200 h-150  flex justify-center items-center text-center flex-col p-5 gap-10">
+    <div className="w-screen h-fit bg-[#F0D6F6] ">
+      <section className="w-screen h-fit grid lg:grid-cols-2 container mx-auto py-5 md:py-10 ">
+        <article className="md:w-full w-full md:h-200 h-100  flex justify-center items-center text-center flex-col px-5 gap-10">
           <div className="bg-gray-400 w-full h-full rounded-4xl overflow-hidden ">
             <img
               src={overviewhero}
@@ -14,10 +14,10 @@ export default function Home_overview() {
           </div>
         </article>
         <article className="relative w-full h-200  flex flex-col md:justify-between items-left p-12 gap-10 overflow-hidden">
-          <p className="font-[Borel] text-5xl w-100 text-[#323F51]">
+          <p className="font-[Borel] text-3xl md:text-5xl md:w-100 text-[#323F51]">
             klinik hewan pertama yang beroperasi 24 jam
           </p>
-          <p className="font-[inter] w-100 text-sm font-medium text-[#323F51]">
+          <p className="font-[inter] lg:w-100 text-md font-medium text-[#323F51]">
             Cucu Kartini menyelesaikan pendidikan dokter hewan di Fakultas
             Kedokteran Hewan Institut Pertanian Bogor (FKH IPB) pada tahun 1982.
             Pada tahun berikutnya, bersama dengan Prof Drh Dondin Sajuthi, PhD,

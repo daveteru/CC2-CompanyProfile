@@ -6,12 +6,12 @@ import specialist_icon from "../assets/specialist_icon.png";
 
 export default function Home_USP() {
   return (
-    <div className="h-150 justify-center flex flex-col relative mt-30 items-center">
-      <h1 className="font-[Borel] text-[32px] relative z-5">Jasa Perawatan Kami</h1>
-      <div className="container mx-auto relative z-5 h-fit flex p-10 gap- text-center text-sm">
-        <div className="w-100 h-full flex flex-col gap-5">
-          <div className="h-[50%] w-full  p-5 flex items-center justify-center">
-            <img src={vaccineicon} alt="" />
+    <div className="h-fit justify-center flex flex-col relative mt-30 items-center">
+      <h1 className="font-[Borel] text-[24px] md:text-[32px] relative z-5">Jasa Perawatan Kami</h1>
+      <div className="container mx-auto relative z-5 h-fit flex flex-col lg:flex-row px-10 py-10 text-center  items-center justify-center ">
+        <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
+          <div className="h-40 p-5 flex items-center justify-center">
+            <img src={vaccineicon} alt=""  className=" mb-10"/>
           </div>
           <h1 className="font-[Borel] text-3xl">Vaccination</h1>
           <p>
@@ -20,9 +20,9 @@ export default function Home_USP() {
             mapun bakteri
           </p>
         </div>
-        <div className="w-100 h-full flex flex-col gap-5">
-          <div className="h-[50%] w-full  p-5 flex items-center justify-center">
-            <img src={inpatient_icon} alt="" className="w-[70%]" />
+        <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
+          <div className="h-40 w-full  p-5 flex items-center justify-center">
+            <img src={inpatient_icon} alt="" className="w-[70%] mb-10" />
           </div>
           <h1 className="font-[Borel] text-3xl">Inpatient Care</h1>
           <p>
@@ -31,9 +31,9 @@ export default function Home_USP() {
             paramedis
           </p>
         </div>
-        <div className="w-100 h-full flex flex-col gap-5">
-          <div className="h-[50%] w-full  p-5 flex items-center justify-center">
-            <img src={general_icon} alt="" />
+        <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
+          <div className="h-40 w-full  p-5 flex items-center justify-center">
+            <img src={general_icon} alt=""className="w-[90%] mb-10" />
           </div>
           <h1 className="font-[Borel] text-3xl">General Clinic</h1>
           <p>
@@ -42,9 +42,9 @@ export default function Home_USP() {
             hewan kesayangan anda
           </p>
         </div>
-        <div className="w-100 h-full flex flex-col gap-5">
-          <div className="h-[50%] w-full  p-5 flex items-center justify-center">
-            <img src={specialist_icon} alt="" />
+        <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0 ">
+          <div className="h-40 w-full  p-5 flex items-center justify-center">
+            <img src={specialist_icon} alt="" className="w-[90%] mb-10" />
           </div>
           <h1 className="font-[Borel] text-3xl">Specialist Clinic</h1>
           <p>

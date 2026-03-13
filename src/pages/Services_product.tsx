@@ -12,7 +12,7 @@ export default function Services_product() {
       <h1 className="font-[Borel] text-[44px] text-blue-700 mb-10 text-center">
         Our Medical Services
       </h1>
-      <section className="w-full h-fit grid grid-cols-3 justify-center gap-2 px-15">
+      <section className="w-full h-fit grid lg:grid-cols-3 justify-center gap-2 md:px-15">
         <Servicecard
           title="Dental Scaling"
           desc="Scaling gigi hewan adalah prosedur medis untuk membersihkan plak dan karang gigi hingga ke bawah gusi. Layanan ini efektif mencegah pembusukan serta radang gusi demi kesehatan mulut dan kenyamanan anabul Anda. Prosedur dilakukan oleh dokter hewan berpengalaman dengan peralatan modern dan steril."

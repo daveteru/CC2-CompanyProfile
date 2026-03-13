@@ -10,7 +10,7 @@ export default function Teams_hero() {
             src={hero}
             alt="Hero Background"
           />
-          <h1 className="font-[Borel] text-7xl w-[600px] leading-22 text-white z-2">
+          <h1 className="font-[Borel] md:text-7xl text-4xl w-full text-center leading-22 text-white z-2">
             Meet the Team.
           </h1>
         </div>

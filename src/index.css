@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@media(min-width:1200px){
 .herogradient {
   background: #b0e4e8;
   background: linear-gradient(
@@ -10,7 +10,7 @@
     rgba(255, 199, 56, 1) 100%
   );
 }
-
+}
 .herogradient2 {
   background: #f0d6f6;
   background: linear-gradient(

@@ -3,7 +3,7 @@ import aboutillust from "../assets/service_illustration.png";
 export default function Services_story() {
   return (
     <div className="w-screen h-fit bg-[#B0E4E8]">
-      <section className="w-screen h-200 grid grid-cols-2 container mx-auto overflow-clip">
+      <section className="w-screen h-fit  lg:p-10 grid lg:grid-cols-2 container mx-auto overflow-clip">
         <div className="w-full h-full py-20 px-10">
           <h1 className="font-[Borel] text-[48px] text-[#323F51]">
             Perawatan Penuh Kasih Didukung Pengalaman Puluhan Tahun

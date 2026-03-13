@@ -31,7 +31,7 @@ export default function Blogs_page() {
       <div className="w-screen bg-white h-fit rounded-t-[100px] md:rounded-t-[150px]">
         <div className="w-full  h-fit container mx-auto py-20 px-10  lg:px-75 font-[inter]">
           <div>
-            <h1 className="text-7xl mt-10">{blogs.title}</h1>
+            <h1 className=" text-5xl md:text-7xl mt-10 w-full">{blogs.title}</h1>
             <hr className="my-5 border border-red-400"></hr>
             <div className="flex justify-between font-bold">
               <p>{blogs.author}</p>
@@ -42,7 +42,7 @@ export default function Blogs_page() {
             </div>
             <div className="mb-10 text-md leading-8">
               <div>
-                <h1 className="font-[Inter] italic text-2xl sm:text-5xl leading-14 mb-5">
+                <h1 className="font-[Inter] italic text-2xl sm:text-5xl md:leading-14 mb-5">
                   {blogs.quote}
                 </h1>
                 <p>{blogs.bodytext}</p>
