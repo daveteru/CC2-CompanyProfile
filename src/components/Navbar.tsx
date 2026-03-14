@@ -11,7 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setisMobile] = useState(window.innerWidth < 700);
 
-  const { isBurgerOpen } = useBurgerStore();
+  useBurgerStore();
 
   useEffect(() => {
     const handleScroll = () => {

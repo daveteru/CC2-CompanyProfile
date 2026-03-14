@@ -10,7 +10,7 @@ export default function Services_hero() {
             src={hero}
             alt="Hero Background"
           />
-          <h1 className="font-[Borel] text-center text-7xl w-[600px] leading-22 text-white z-2">
+          <h1 className="font-[Borel] text-center text-4xl md:text-7xl w-[600px] leading-22 text-white z-2">
             Services
           </h1>
         </div>

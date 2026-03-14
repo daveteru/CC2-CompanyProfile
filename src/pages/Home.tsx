@@ -7,21 +7,23 @@ import Home_overview from "./Home_overview";
 import Home_story from "./Home_story";
 import Home_testimonial from "./Home_testimonial";
 import Home_USP from "./Home_USP";
+import Map from "../components/Map";
 
 export default function Home() {
-    useEffect(()=>{
-      window.scrollTo({ top: 0 });
-    },[]);
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <div>
-      <Navbar/>
-      <Home_hero/>
-      <Home_story/>
-      <Home_USP/>
-      <Home_overview/>
-      <Home_testimonial/>
-      <Contact_whatsapp/>
-      <Footer/>
+      <Navbar />
+      <Home_hero />
+      <Home_story />
+      <Home_USP />
+      <Home_overview />
+      <Home_testimonial />
+      <Contact_whatsapp />
+      <Map/>
+      <Footer />
     </div>
   );
 }

@@ -1,12 +1,10 @@
-import { Link, Links, useParams } from "react-router";
-import Blogs_hero from "./Blogs_hero";
+import Backendless from "backendless";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router";
 import Button1 from "../components/Button1";
-import Createblogmodule from "../components/Createblogmodule";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Blogcard from "../components/Blogcard";
-import { useEffect, useState } from "react";
-import Backendless from "backendless";
+import Blogs_hero from "./Blogs_hero";
 
 export default function Blogs_page() {
   const { id }: any = useParams();
@@ -21,7 +19,14 @@ export default function Blogs_page() {
 
   const [blogs, setblogs] = useState<any>({});
 
-  // const [blogdata,setBlogdata]=useState([])
+  function formatdate(timestamp: any) {
+    const date = new Date(timestamp);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
 
   return (
     <div className="bg-red-400">
@@ -35,10 +40,11 @@ export default function Blogs_page() {
             <hr className="my-5 border border-red-400"></hr>
             <div className="flex justify-between font-bold">
               <p>{blogs.author}</p>
-              <p className="italic">{blogs.created}</p>
+              <div className="italic">{formatdate(blogs.created)}</div>
             </div>
             <div className="w-full h-150 bg-gray-400 flex justify-center items-center my-5">
-              IMAGE
+                          <img src={blogs.thumbnail} alt="" className="w-full h-full object-cover" />
+
             </div>
             <div className="mb-10 text-md leading-8">
               <div>

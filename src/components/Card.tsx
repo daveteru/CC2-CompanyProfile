@@ -1,5 +1,3 @@
-import Button1 from "./Button1";
-
 interface cardprops {
   name: string;
   petname: string; //working years

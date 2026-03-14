@@ -3,7 +3,7 @@ import { useAuth } from "../store/store";
 
 export default function Footer() {
 
-  let {isLogin , logout} = useAuth();
+  const { logout } = useAuth();
 
   return (
     <div className="w-screen bg-[#A83271] ">

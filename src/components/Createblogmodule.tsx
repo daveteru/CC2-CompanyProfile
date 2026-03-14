@@ -2,21 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { axiosInstance } from "../lib/axios";
 
-interface blog {
-  DESCRIPTION: string;
-  created: number;
-  ___class: string;
-  title: string;
-  thumbnail: string | undefined;
-  time: null;
-  bodytext: string;
-  author: string;
-  ownerId: string | null;
-  updated: number;
-  objectId: string;
-  quote: string;
-}
-
 export default function Createblogmodule() {
   const [body, setBody] = useState<string>("");
   const [title, setTitle] = useState<string>("");
@@ -28,7 +13,7 @@ export default function Createblogmodule() {
     if (!body || !title || !author) return alert("all form must be filled");
     try {
       setIsLoading(true);
-      await axiosInstance.post("/data/Blogcucu", {
+      await axiosInstance.post("data/Blogcucu", {
         title: title,
         author: author,
         bodytext: body,

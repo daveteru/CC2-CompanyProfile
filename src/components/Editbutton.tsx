@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { useAuth } from "../store/store";
 
 export default function Editbutton() {
 // const { name , isLogin , level } = useAuth()

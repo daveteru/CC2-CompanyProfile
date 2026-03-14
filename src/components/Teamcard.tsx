@@ -40,12 +40,12 @@ export default function Teamcard({title,firstname,lastname,imgurl,}: teamcardpro
 
   return (
     <div>
-      <div className="w-full  min-h-75 rounded-3xl bg-amber-400 p-8 gap-7 justify-between items-center md:items-start flex md:flex-row flex-col text-center md:text-left font-[inter] overflow-hidden drop-shadow-[1px_10px_0px_rgba(239,156,62,1)]">
+      <div className="w-full  min-h-100 rounded-3xl bg-amber-400 p-8 gap-7 justify-between items-center lg:items-start flex lg:flex-row flex-col text-center lg:text-left font-[inter] overflow-hidden drop-shadow-[1px_10px_0px_rgba(239,156,62,1)]">
         <div className="w-20 h-20 md:w-40 md:h-40 lg:w-20 lg:h-20 bg-red-200 rounded-full overflow-hidden shrink-0 aspect-square">
           <img src={imgurl} alt="" className="object-fit w-full h-full" />
         </div>
         <div className="w-full flex flex-col justify-between text-[#323F51] h-full ">
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center lg:items-start">
             <h1 className="text-2xl w-full ">
               {title} {firstname} {lastname}
             </h1>

@@ -1,5 +1,3 @@
-import Button1 from "./Button1";
-
 interface mainvetprops {
   name: string;
   date: string; //working years
@@ -18,7 +16,7 @@ export default function Mainvet({
   return (
     <div>
       {" "}
-      <div className="bg-[#F0D6F6] w-100 h-150 rounded-3xl overflow-hidden flex flex-col  text-[#323F51] drop-shadow-[0px_8px_0px_rgba(94,29,63,1)]   active:translate-y-2 active:drop-shadow-none transition-all">
+      <div className="bg-[#F0D6F6] max-w-100 h-150 rounded-3xl overflow-hidden flex flex-col  text-[#323F51] drop-shadow-[0px_8px_0px_rgba(94,29,63,1)]   active:translate-y-2 active:drop-shadow-none transition-all">
         <div className="w-full h-120  bg-amber-300 overflow-hidden">
           <img
             src={imgurl}

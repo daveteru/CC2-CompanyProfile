@@ -1,4 +1,3 @@
-import React from "react";
 import { useBurgerStore } from "../store/store";
 
 export default function Burgericon() {

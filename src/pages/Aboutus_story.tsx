@@ -3,9 +3,9 @@ import aboutillust from "../assets/about_illustration.png";
 export default function Aboutus_story() {
   return (
     <div className="w-screen h-fit bg-[#F0D6F6]">
-      <section className="w-screen h-200 grid grid-cols-2 container mx-auto overflow-clip">
+      <section className="w-screen h-fit grid lg:grid-cols-2 container mx-auto overflow-clip">
         <div className="w-full h-full py-20 px-15">
-          <h1 className="font-[Borel] text-[48px] text-[#323F51]">
+          <h1 className="font-[Borel] text-4xl md:text-[48px] text-[#323F51]">
             Inspirasi di Balik Kemajuan Kedokteran Hewan Indonesia
           </h1>
           <p className="leading-8">

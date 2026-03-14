@@ -28,6 +28,7 @@ export default function Blogs_content({blogs}: { blogs:any[]}) {
           bodytext={blog.bodytext}
           created={blog.created}
           quote={blog.quote}
+          imgurl={blog.thumbnail}
           />
         ))}
       </div>

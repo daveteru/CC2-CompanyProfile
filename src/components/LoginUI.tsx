@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import loginillus from "../assets/login_illus.png";
 import { useState } from "react";
 import { useAuth } from "../store/store";

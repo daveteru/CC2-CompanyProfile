@@ -3,7 +3,6 @@ import Teamcard from "../components/Teamcard";
 
 export default function Teams_employee() {
   const [employees, setEmployees] = useState([]);
-  const [currentpage, setCurrentpage] = useState(1);
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -27,7 +26,7 @@ export default function Teams_employee() {
         <h1 className="font-[Borel] text-[44px] text-red-400 text-center">
           Team @ PDHB drh.Cucu
         </h1>
-        <p className="text-center text-gray-500 mt-2 mx-auto max-w-xl">
+        <p className="text-center text-gray-500 mt-2 mx-auto max-w-xl p-5">
           Para profesional berdedikasi yang berkomitmen pada perawatan penuh
           kasih kenali sosok-sosok di balik layanan kesehatan terpercaya PDHB
           drh. Cucu.

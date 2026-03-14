@@ -1,5 +1,3 @@
-import Blogs_content from "./Blogs_content";
-import Blogs_hero from "./Blogs_hero";
 import LoginUI from "../components/LoginUI";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";

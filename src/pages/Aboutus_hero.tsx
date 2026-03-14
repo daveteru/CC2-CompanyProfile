@@ -10,7 +10,7 @@ export default function Aboutus_hero() {
             src={hero}
             alt="Hero Background"
           />
-          <h1 className="font-[Borel] text-7xl w-[600px] text-center leading-22 text-white z-2">
+          <h1 className="font-[Borel] text-4xl md:text-7xl w-[600px] text-center leading-22 text-white z-2">
             About Us.
           </h1>
         </div>
