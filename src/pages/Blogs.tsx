@@ -11,6 +11,7 @@ export default function Blogs() {
   }, []);
 
   const [blogs, setBlogs] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +21,8 @@ export default function Blogs() {
         console.log(allData);
       } catch (err) {
         alert("data failed to be fetched");
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -30,7 +33,7 @@ export default function Blogs() {
     <div>
       <Navbar />
       <Blogs_hero />
-      <Blogs_content blogs={blogs} />
+      <Blogs_content blogs={blogs} loading={loading} />
       <Footer  />
     </div>
   );
