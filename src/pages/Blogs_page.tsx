@@ -32,9 +32,9 @@ export default function Blogs_page() {
     <div className="bg-red-400">
       <Navbar />
       <Blogs_hero />
-      <div className="bg-red-400 py-15 h-fit flex justify-center"> </div>
+      <div className="bg-red-400 py-10 h-fit flex justify-center"> </div>
       <div className="w-screen bg-white h-fit rounded-t-[100px] md:rounded-t-[150px]">
-        <div className="w-full  h-fit container mx-auto py-20 px-10  lg:px-75 font-[inter]">
+        <div className="w-full  h-fit container mx-auto py-20 px-10  lg:px-50 font-[inter]">
           <div>
             <h1 className=" text-5xl md:text-7xl mt-10 w-full">{blogs.title}</h1>
             <hr className="my-5 border border-red-400"></hr>
