@@ -10,7 +10,7 @@ export default function Aboutus_team() {
       <h1 className="font-[Borel] text-[44px] text-blue-700 mb-10 text-center">
         Our Main Veterinarian
       </h1>
-      <section className="w-full flex gap-10 flex-wrap justify-center">
+      <section className="w-full flex gap-5 flex-wrap items-center justify-center">
         <Mainvet
           name="drh. Cucu Kartini Sajuthi"
           date="1983 - Sekarang"
