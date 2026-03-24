@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import catstory from "../assets/cat_story.png";
-import polaroid2 from "../assets/polaroid2.png";
+import polaroid2 from "../assets/polaroid2.webp";
 import paw from "../assets/paw.png";
 import homeillust from "../assets/home-illust.png";
 

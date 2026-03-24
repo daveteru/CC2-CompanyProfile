@@ -35,9 +35,9 @@ export default function Navbar() {
       <div
         className={`fixed z-10 w-screen box-border px-5 md:px-10 lg:px-20 py-5 flex justify-between continer items-center transition ${scrolled ? "bg-[#A83271]" : ""}`}
       >
-        <Link to="/">
+        <Link to="/" aria-label="Go to homepage">
           {" "}
-          <img src={logo} alt="" className="h-[50px] object-contain" loading="lazy" />
+          <img src={logo} alt="Company logo" className="h-[50px] object-contain" loading="lazy" />
         </Link>
         <div className="w-full h-fit flex lg:flex-row gap-5 justify-end items-end ">
           {isMobile ? "" : <Navbarbuttons />}

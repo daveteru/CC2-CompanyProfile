@@ -38,6 +38,7 @@ export default function Blogs_content({blogs, loading}: { blogs:any[], loading: 
           drh. Cucu.
         </p>
       </div>
+      <div className="container mx-auto px-25">test</div>
       {role === "admin" ? <Blogeditor /> : ""}
       <div className="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto my-20 px-10 md:px-25">
         {loading

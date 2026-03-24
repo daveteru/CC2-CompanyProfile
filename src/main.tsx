@@ -1,4 +1,4 @@
-import { StrictMode, lazy, Suspense } from "react";
+import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -48,6 +48,8 @@ const router = createBrowserRouter([
     element: <Blogs_page />,
   },
 ]);
+
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

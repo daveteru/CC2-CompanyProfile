@@ -9,6 +9,7 @@ export default function Aboutus_culture() {
             <img
               src={culturehero}
               className="object-cover h-full w-full "
+              loading="lazy"
             ></img>
           </div>
         </article>

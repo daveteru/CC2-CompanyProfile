@@ -9,7 +9,9 @@ export default function Home_overview() {
           <div className="bg-gray-400 w-full h-full rounded-4xl overflow-hidden ">
             <img
               src={overviewhero}
+              alt="Clinic overview"
               className="object-cover h-full w-full "
+              loading="lazy"
             ></img>
           </div>
         </article>

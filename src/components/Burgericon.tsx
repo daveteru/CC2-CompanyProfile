@@ -4,7 +4,7 @@ export default function Burgericon() {
     const {openburger} = useBurgerStore()
   return (
     <div >
-      <button className="translate-y-1 cursor-pointer" onClick={openburger}>
+      <button className="translate-y-1 cursor-pointer" onClick={openburger} aria-label="Open menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"

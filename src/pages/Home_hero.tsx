@@ -1,4 +1,4 @@
-import video from "../assets/test_video.mp4"
+import video from "../assets/test_video_compressed.mp4"
 
 export default function Home_hero() {
   const gotowhatsapp = ()=>{ window.location.href = 'http://wa.me/+628811059617'}
@@ -7,7 +7,7 @@ export default function Home_hero() {
     <div className=" bg-[#B0E4E8] herogradient">
       <header className="relative w-screen h-[95vh] rounded-b-[150px]  overflow-hidden">
         <div className="w-full h-full flex justify-end flex-col gap-3 px-10 container mx-auto py-10 ">
-            <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
+            <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop preload="auto" playsInline>
               <source src={video} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>

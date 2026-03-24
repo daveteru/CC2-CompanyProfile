@@ -1,12 +1,12 @@
 import Backgroundlines from "../svg/Backgroundlines";
 import vaccineicon from "../assets/vaccine_icon.png";
-import inpatient_icon from "../assets/inpatient_icon.png";
-import general_icon from "../assets/general_icon.png";
+import inpatient_icon from "../assets/inpatient_icon.webp";
+import general_icon from "../assets/general_icon.webp";
 import specialist_icon from "../assets/specialist_icon.png";
 
 export default function Home_USP() {
   return (
-    <div className="h-fit justify-center flex flex-col relative mt-30 items-center">
+    <div className="h-fit justify-center flex flex-col relative mt-70 items-center mb-50">
       <h1 className="font-[Borel] text-[24px] md:text-[32px] relative z-5">Jasa Perawatan Kami</h1>
       <div className="container mx-auto relative z-5 h-fit flex flex-col lg:flex-row px-10 py-10 text-center  items-center justify-center ">
         <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">

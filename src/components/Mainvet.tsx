@@ -22,6 +22,7 @@ export default function Mainvet({
             src={imgurl}
             alt=""
             className="object-cover w-full h-full object-top pointer-events-none"
+            loading="lazy"
           />
         </div>
         <div className="px-8 flex flex-col justify-between pb-8 h-full">

@@ -20,6 +20,7 @@ export default function Aboutus_gallery() {
             src={galleryall}
             alt=""
             className="w-100 md:w-[80%] absolute z-3"
+            loading="lazy"
           ></img>{" "}
         </div>
       </div>
