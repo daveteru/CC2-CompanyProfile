@@ -1,4 +1,4 @@
-import video from "../assets/test_video_compressed.mp4"
+import video from "../assets/test_video_compressed_2.mp4"
 
 export default function Home_hero() {
   const gotowhatsapp = ()=>{ window.location.href = 'http://wa.me/+628811059617'}
