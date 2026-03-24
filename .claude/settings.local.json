@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd \"/Users/teru/Library/Mobile Documents/com~apple~CloudDocs/_Purwadhika/Class Exercises/modul-2/CodeChallenge/Company Profile/CC2-CompanyProfile\" && npm run build 2>&1)"
+      "Bash(cd \"/Users/teru/Library/Mobile Documents/com~apple~CloudDocs/_Purwadhika/Class Exercises/modul-2/CodeChallenge/Company Profile/CC2-CompanyProfile\" && npm run build 2>&1)",
+      "Bash(npm uninstall:*)",
+      "Bash(npx tsc:*)"
     ]
   }
 }

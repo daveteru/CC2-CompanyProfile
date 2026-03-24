@@ -1,4 +1,4 @@
-import Backendless from "backendless";
+import { axiosInstance } from "../lib/axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import Button1 from "../components/Button1";
@@ -11,8 +11,8 @@ export default function Blogs_page() {
   useEffect(() => {
     window.scrollTo({ top: 0 });
     const fetchData = async () => {
-      const allData = await Backendless.Data.of("Blogcucu").findById(id);
-      setblogs(allData);
+      const res = await axiosInstance.get(`/data/Blogcucu/${id}`);
+      setblogs(res.data);
     };
     fetchData();
   }, [id]);
@@ -43,7 +43,7 @@ export default function Blogs_page() {
               <div className="italic">{formatdate(blogs.created)}</div>
             </div>
             <div className="w-full h-150 bg-gray-400 flex justify-center items-center my-5">
-                          <img src={blogs.thumbnail} alt="" className="w-full h-full object-cover" />
+                          <img src={blogs.thumbnail} alt="" className="w-full h-full object-cover" loading="lazy" />
 
             </div>
             <div className="mb-10 text-md leading-8">

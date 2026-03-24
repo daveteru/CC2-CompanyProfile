@@ -9,7 +9,7 @@ export default function Home_story() {
     <div className="w-screen h-fit flex justify-center herogradient">
       <section className="w-full h-fit flex  flex-col lg:grid lg:grid-cols-2 lg:container lg:mx-auto  ">
         <article className="w-full h-200 bg-[#B0E4E8] flex justify-center items-center text-center flex-col p-25 gap-10">
-          <img src={catstory} alt="" className="w-80" />
+          <img src={catstory} alt="" className="w-80" loading="lazy" />
           <p className="font-[Borel] text-5xl w-80 text-blue-700">
             a reliable team to care for your pet
           </p>
@@ -27,12 +27,14 @@ export default function Home_story() {
               className="object-cover w-full h-full"
               src={polaroid2}
               alt=""
+              loading="lazy"
             />{" "}
           </div>
           <img
             src={paw}
             alt=""
             className="w-50 h-50 absolute bottom-35 nd:left-70 rotate-30"
+            loading="lazy"
           />
           <div className="flex justify-between w-full">
             <p className="font-[borel] w-60 text-3xl text-red-400">
@@ -42,6 +44,7 @@ export default function Home_story() {
               src={homeillust}
               alt=""
               className="-rotate-7 w-60"
+              loading="lazy"
             />
           </div>
         </article>

@@ -56,7 +56,7 @@ export default function LoginUI() {
             {" "}
             welcome back !
           </h1>
-          <img src={loginillus} alt="" className="stretch-0 aspect-auto w-50 md:w-70" />
+          <img src={loginillus} alt="" className="stretch-0 aspect-auto w-50 md:w-70" loading="lazy" />
         </div>
         <div className="flex flex-col justify-center">
           <fieldset className="flex flex-col">

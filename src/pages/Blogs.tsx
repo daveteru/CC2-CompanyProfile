@@ -3,7 +3,7 @@ import Blogs_hero from "./Blogs_hero";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
-import Backendless from "backendless";
+import { axiosInstance } from "../lib/axios";
 
 export default function Blogs() {
   useEffect(() => {
@@ -16,9 +16,8 @@ export default function Blogs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const allData = await Backendless.Data.of("Blogcucu").find();
-        setBlogs(allData);
-        console.log(allData);
+        const res = await axiosInstance.get("/data/Blogcucu");
+        setBlogs(res.data);
       } catch (err) {
         alert("data failed to be fetched");
       } finally {

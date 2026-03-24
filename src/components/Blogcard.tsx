@@ -34,7 +34,7 @@ export default function Blogcard({
           <h1 className="font-[Borel] text-3xl w-full h-15">{title}</h1>
           <hr className=" border-[2px] border-[#A83271]"></hr>
           <div className="w-full h-70 bg-gray-200 my-5">
-            <img src={imgurl} alt="" className="w-full h-full object-cover" />
+            <img src={imgurl} alt="" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="font-[inter]">
             <hr className="border-[2px] border-[#A83271]"></hr>

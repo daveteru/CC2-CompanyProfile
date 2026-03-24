@@ -37,7 +37,7 @@ export default function Navbar() {
       >
         <Link to="/">
           {" "}
-          <img src={logo} alt="" className="h-[50px] object-contain" />
+          <img src={logo} alt="" className="h-[50px] object-contain" loading="lazy" />
         </Link>
         <div className="w-full h-fit flex lg:flex-row gap-5 justify-end items-end ">
           {isMobile ? "" : <Navbarbuttons />}

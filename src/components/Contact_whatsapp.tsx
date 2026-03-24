@@ -9,7 +9,7 @@ export default function Contact_whatsapp() {
         onClick={gotowhatsapp}>
           KONTAK WHATSAPP KAMI
         </button>
-      <img className="absolute z-0" src={highlight} alt="" />
+      <img className="absolute z-0" src={highlight} alt="" loading="lazy" />
     </div>
   );
 }

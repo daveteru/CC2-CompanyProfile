@@ -19,7 +19,7 @@ export default function Aboutus_story() {
         </div>
         <div className="flex flex-col items-end justify-end p-10">
 
-        <img src={aboutillust} alt="" />
+        <img src={aboutillust} alt="" loading="lazy" />
         </div>
       </section>
     </div>

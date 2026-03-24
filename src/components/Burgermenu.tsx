@@ -31,7 +31,7 @@ export default function Burgermenu() {
             BLOGS
           </button>
         </Link>
-        <button onClick={closeburger}><img src={xasd} alt="" className="w-10 mt-10" /></button>
+        <button onClick={closeburger}><img src={xasd} alt="" className="w-10 mt-10" loading="lazy" /></button>
       </div>
     </div>
   );

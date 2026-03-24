@@ -11,7 +11,7 @@ export default function Home_USP() {
       <div className="container mx-auto relative z-5 h-fit flex flex-col lg:flex-row px-10 py-10 text-center  items-center justify-center ">
         <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
           <div className="h-40 p-5 flex items-center justify-center">
-            <img src={vaccineicon} alt=""  className=" mb-10"/>
+            <img src={vaccineicon} alt="" className=" mb-10" loading="lazy" />
           </div>
           <h1 className="font-[Borel] text-3xl">Vaccination</h1>
           <p>
@@ -22,7 +22,7 @@ export default function Home_USP() {
         </div>
         <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
           <div className="h-40 w-full  p-5 flex items-center justify-center">
-            <img src={inpatient_icon} alt="" className="w-[70%] mb-10" />
+            <img src={inpatient_icon} alt="" className="w-[70%] mb-10" loading="lazy" />
           </div>
           <h1 className="font-[Borel] text-3xl">Inpatient Care</h1>
           <p>
@@ -33,7 +33,7 @@ export default function Home_USP() {
         </div>
         <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0">
           <div className="h-40 w-full  p-5 flex items-center justify-center">
-            <img src={general_icon} alt=""className="w-[90%] mb-10" />
+            <img src={general_icon} alt="" className="w-[90%] mb-10" loading="lazy" />
           </div>
           <h1 className="font-[Borel] text-3xl">General Clinic</h1>
           <p>
@@ -44,7 +44,7 @@ export default function Home_USP() {
         </div>
         <div className="w-100 p-10 h-full flex flex-col gap-5 mb-20 md:mb-0 ">
           <div className="h-40 w-full  p-5 flex items-center justify-center">
-            <img src={specialist_icon} alt="" className="w-[90%] mb-10" />
+            <img src={specialist_icon} alt="" className="w-[90%] mb-10" loading="lazy" />
           </div>
           <h1 className="font-[Borel] text-3xl">Specialist Clinic</h1>
           <p>

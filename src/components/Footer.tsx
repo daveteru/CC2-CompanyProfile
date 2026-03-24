@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex container mx-auto w-screen h-70 bg-[#A83271]">
         <div className="flex w-screen p-10 justify-between">
           <div className="flex flex-col gap-5 items-start">
-            <img src={logo} alt="" className="h-10 object-contain" />
+            <img src={logo} alt="" className="h-10 object-contain" loading="lazy" />
             <p className="text-white w-40 text-sm sm:font-medium sm:w-120">
               Ruko, Jl. Sunter Permai Raya No.2 Tahap 3, RT.2/RW.12, Papanggo,
               Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14340

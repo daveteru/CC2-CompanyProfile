@@ -19,7 +19,7 @@ export default function Teams_story() {
           </p>
         </div>
         <div className="flex flex-col items-end justify-end p-10">
-          <img src={illust} alt="" />
+          <img src={illust} alt="" loading="lazy" />
         </div>
       </section>
     </div>
