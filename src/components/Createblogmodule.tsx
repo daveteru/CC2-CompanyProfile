@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { axiosInstance } from "../lib/axios";
 
 export default function Createblogmodule() {
@@ -8,6 +8,7 @@ export default function Createblogmodule() {
   const [author, setAuthor] = useState<string>("");
   const [quote, setQuote] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     if (!body || !title || !author) return alert("all form must be filled");
@@ -20,6 +21,7 @@ export default function Createblogmodule() {
         quote: quote,
       });
       alert("Successfully submitted a blog");
+      navigate("/blogs");
     } catch (error) {
       alert("Failed to submit blog");
     } finally {

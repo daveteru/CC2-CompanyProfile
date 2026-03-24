@@ -1,7 +1,8 @@
 import Blogcard from "../components/Blogcard";
 import Blogeditor from "../components/Blogeditor";
-import { useAuth } from "../store/store";
+import { useAuth, useSearchStore } from "../store/store";
 import { Skeleton } from "../components/ui/skeleton";
+import Search from "@/components/Search";
 
 function BlogcardSkeleton() {
   return (
@@ -25,6 +26,8 @@ function BlogcardSkeleton() {
 
 export default function Blogs_content({blogs, loading}: { blogs:any[], loading: boolean}) {
   const { role } = useAuth();
+  const { search, keyword } = useSearchStore();
+
 
   return (
     <div className="w-screen">
@@ -38,23 +41,26 @@ export default function Blogs_content({blogs, loading}: { blogs:any[], loading: 
           drh. Cucu.
         </p>
       </div>
-      <div className="container mx-auto px-25">test</div>
       {role === "admin" ? <Blogeditor /> : ""}
+      <div className="container mx-auto px-25"><Search/></div>
       <div className="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto my-20 px-10 md:px-25">
         {loading
-          ? Array.from({ length: 6 }).map((_, i) => <BlogcardSkeleton key={i} />)
-          : blogs.map((blog : any)=>(
-            <Blogcard
-            key={blog.objectId}
-            blogid={blog.objectId}
-            title={blog.title}
-            author={blog.author}
-            bodytext={blog.bodytext}
-            created={blog.created}
-            quote={blog.quote}
-            imgurl={blog.thumbnail}
-            />
-          ))
+          ? Array.from({ length: 3 }).map((_, i) => <BlogcardSkeleton key={i} />)
+          : blogs.map((blog : any)=>{
+            const isVisible = blog[keyword]?.toLowerCase().includes(search.toLowerCase());
+            return (
+            <div key={blog.objectId} className={isVisible ? "" : "hidden"}>
+              <Blogcard
+              blogid={blog.objectId}
+              title={blog.title}
+              author={blog.author}
+              bodytext={blog.bodytext}
+              created={blog.created}
+              quote={blog.quote}
+              imgurl={blog.thumbnail}
+              />
+            </div>
+          )})
         }
       </div>
     </div>

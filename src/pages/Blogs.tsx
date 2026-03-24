@@ -18,6 +18,7 @@ export default function Blogs() {
       try {
         const res = await axiosInstance.get("/data/Blogcucu");
         setBlogs(res.data);
+        console.table(res.data)
       } catch (err) {
         alert("data failed to be fetched");
       } finally {

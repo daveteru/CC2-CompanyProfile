@@ -39,7 +39,7 @@ export default function LoginUI() {
     if (matchresult) {
       login(matchresult.role, matchresult.name);
       alert(`login Success ${matchresult.role}`);
-      movepage("/blogscreate");
+      movepage("/blogs");
     } else {
       alert("Email or Password is Wrong");
     }
