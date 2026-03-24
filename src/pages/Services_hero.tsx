@@ -6,7 +6,7 @@ export default function Services_hero() {
       <header className="relative w-screen h-[95vh] rounded-b-[150px]  overflow-hidden">
         <div className="w-full h-full flex justify-end items-center flex-col gap-3 px-10 container mx-auto py-10 ">
           <img
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             src={hero}
             alt="Hero Background"
           />
