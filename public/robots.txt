@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cc-2-company-profile.vercel.app/sitemap.xml
