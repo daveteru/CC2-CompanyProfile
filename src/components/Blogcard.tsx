@@ -40,7 +40,7 @@ export default function Blogcard({
       <div
         className={`min-h-140 p-2 ${isDelete && selected ? "shadow-[0px_0px_23px_1px_#ff6161] rounded-2xl" : ""}`}
         onClick={() => {
-          isDelete && toggleSelect(blogid)
+          isDelete? toggleSelect(blogid) : null
           console.log(selectedIds);
         }}
       >

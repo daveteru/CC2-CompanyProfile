@@ -1,110 +1,106 @@
 import { useNavigate } from "react-router";
 import loginillus from "../assets/login_illus.png";
-import { useState } from "react";
+
 import { useAuth } from "../store/store";
+import { loginSchema, type loginform } from "@/lib/zodAuth";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { supabase } from "@/lib/supabase";
 
 export default function LoginUI() {
-  interface userDBtype {
-    id: number;
-    email: string;
-    name: string;
-    password: string;
-    role: "user" | "admin";
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<loginform>({
+    resolver: zodResolver(loginSchema),
+  });
 
-  const userDB: userDBtype[] = [
-    {
-      id: 1,
-      email: "budi@mail.com",
-      name: "Budi",
-      password: "budi123",
-      role: "user",
-    },
-    {
-      id: 2,
-      email: "siti@mail.com",
-      name: "Siti",
-      password: "siti123",
-      role: "admin",
-    },
-  ];
 
   const movepage = useNavigate();
   const { login } = useAuth();
 
-  function checkUser() {
-    const matchresult = userDB.find(
-      (e) => e.email === email && e.password === pass,
-    );
-    if (matchresult) {
-      login(matchresult.role, matchresult.name);
-      alert(`login Success ${matchresult.role}`);
-      movepage("/blogs");
-    } else {
-      alert("Email or Password is Wrong");
+  async function checkUser(userinput: loginform) {
+    const {data: authData , error } = await supabase.auth.signInWithPassword({
+      email: userinput.email,
+      password:userinput.password,
+    });
+
+    if (error){
+      alert("email or password is wrong!!")
+      return
     }
+    const user = authData.user;
+    const role = user.app_metadata?.role ?? "user";
+    login(role, user.user_metadata?.display_name ?? "User");
+    alert("Login Success");
+    movepage("/blogs");
+    console.log(authData.session)
   }
 
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-
   return (
-    <div className="w-screen h-165 flex justify-center pb-40 px-5 ">
-      <div className="h-fit min-h-120 w-200 rounded-3xl bg-white p-10 grid md:grid-cols-2 gap-8 border-4 border-red-500 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] ">
-        <div className="flex flex-col justify-center items-center md:border-r border-red-300">
-          <h1 className="font-[Borel] text-xl md:text-3xl text-red-400">
+    <div className="flex h-165 w-screen justify-center px-5 pb-40">
+      <div className="grid h-fit min-h-120 w-200 gap-8 rounded-3xl border-4 border-red-500 bg-white p-10 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center border-red-300 md:border-r">
+          <h1 className="font-[Borel] text-xl text-red-400 md:text-3xl">
             {" "}
             welcome back !
           </h1>
-          <img src={loginillus} alt="" className="stretch-0 aspect-auto w-50 md:w-70" loading="lazy" />
+          <img
+            src={loginillus}
+            alt=""
+            className="stretch-0 aspect-auto w-50 md:w-70"
+            loading="lazy"
+          />
         </div>
         <div className="flex flex-col justify-center">
           <fieldset className="flex flex-col">
-            <div className="flex flex-col mb-5">
+            <div className="mb-5 flex flex-col">
               <label
                 htmlFor="email"
-                className="text-xl text-red-700 font-[Borel]"
+                className="font-[Borel] text-xl text-red-700"
               >
                 Email
               </label>
               <input
                 type="text"
                 id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                {...register("email")}
+                className="h-10 rounded-md bg-red-200 p-5"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
-                    checkUser();
+                    handleSubmit(checkUser)();
                   }
                 }}
-                className="bg-red-200 rounded-md h-10 p-5"
               ></input>
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
-            <label
-              htmlFor="pass"
-              className="text-xl  text-red-700  font-[Borel]"
-            >
+            <label htmlFor="pass" className="font-[Borel] text-xl text-red-700">
               Password
             </label>
             <input
               type="password"
               id="pass"
-              name="pass"
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
+              {...register("password")}
+              className="h-10 rounded-md bg-red-200 p-5"
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  checkUser();
+                  handleSubmit(checkUser)();
                 }
               }}
-              className="bg-red-200 rounded-md h-10 p-5"
             ></input>
+            {errors.password && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.password.message}
+              </p>
+            )}
             <button
-              className="h-10 w-50 rounded-2xl mt-5 text-white bg-red-400 drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none "
-              onClick={() => {
-                checkUser();
-              }}
+              className="mt-5 h-10 w-50 rounded-2xl bg-red-400 text-white drop-shadow-[0px_8px_0px_rgba(236,38,38,1)] active:translate-y-2 active:drop-shadow-none"
+              onClick={handleSubmit(checkUser)}
             >
               Login{" "}
             </button>

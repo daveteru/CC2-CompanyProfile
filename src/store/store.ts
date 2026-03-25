@@ -48,8 +48,10 @@ export const useSearchStore = create<searchStore>((set) => ({
 
 type editblogmodule = {
   isDelete?: boolean;
+  isEdit?: boolean;
   selectedIds: number[];
   setIsDelete: () => void;
+  setIsEdit: () => void;
   setCancelDelete: () => void;
   toggleSelect: (id: number) => void;
   clearSelected: () => void;
@@ -57,10 +59,13 @@ type editblogmodule = {
 
 export const useEditBlogStore = create<editblogmodule>((set) => ({
   isDelete: false,
+  isEdit: false,
   selectedIds: [],
   setIsDelete: () => {
-    alert("select blogs you want to delete");
     set({ isDelete: true });
+  },
+    setIsEdit: () => {
+    set({ isEdit: true });
   },
   setCancelDelete: () => set({ isDelete: false, selectedIds: [] }),
   toggleSelect: (id) =>

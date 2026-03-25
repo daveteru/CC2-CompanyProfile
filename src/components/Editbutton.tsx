@@ -1,12 +1,15 @@
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 
 export default function Editbutton() {
-// const { name , isLogin , level } = useAuth()
+const { id }: any = useParams();
 
-  return <div>
-  <Link to="/blogscreate">
-            <button className="h-10 px-10 rounded-2xl bg-[#A83271] font-bold drop-shadow-[0px_8px_0px_rgba(94,29,63,1)] border-4 border-[#5E1D3F] text-white active:translate-y-2 active:drop-shadow-none transition-all">
-                Create New Article</button>
-  </Link>
-     </div>;
+  return (
+    <div>
+      <Link to={`/editblog/${id}`}>
+        <button className="h-fit rounded-2xl border-4 border-[#5E1D3F] bg-[#A83271] px-5 py-2 font-bold text-white drop-shadow-[0px_8px_0px_rgba(94,29,63,1)] transition-all active:translate-y-2 active:drop-shadow-none">
+          Edit Article
+        </button>
+      </Link>
+    </div>
+  );
 }

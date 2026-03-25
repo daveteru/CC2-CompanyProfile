@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
 import "./index.css";
+import Blogs_edit from "./pages/Blogs_edit";
 
 const Home = lazy(() => import("./pages/Home"));
 const Aboutus = lazy(() => import("./pages/Aboutus"));
@@ -47,9 +48,11 @@ const router = createBrowserRouter([
     path: "/blogspage/:id",
     element: <Blogs_page />,
   },
+  {
+    path: "/editblog/:id",
+    element: <Blogs_edit />,
+  },
 ]);
-
-
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

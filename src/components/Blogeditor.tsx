@@ -1,26 +1,25 @@
 import { useEditBlogStore } from "@/store/store";
+import Createbutton from "./Createbutton";
 import Deletebutton from "./Deletebutton";
-import Deleteconfirmbutton from "./Deleteconfirmbutton";
 import Editbutton from "./Editbutton";
-import Deletecancelbutton from "./Deletecancelbutton";
 
 export default function Blogeditor() {
   const {isDelete} = useEditBlogStore();
 
 
   return (
-    <div className="container mx-auto px-40">
-      <div className="my-20  p-20 rounded-4xl bg-red-200 flex gap-10 items-center">
-        <h2 className="font-[Borel] text-2xl text-red-500 translate-y-3">
+    <div className="container mx-auto md:px-40">
+      <div className="mt-20 mb-5 mx-5 md:mx-0 p-20 rounded-4xl bg-[#ae608b] flex flex-col lg:flex-row gap-5 items-center">
+        <h2 className="font-[Borel] text-2xl text-white translate-y-3">
           Admin Panel
         </h2>
-        <Editbutton />
+        <Createbutton />
         <div className="flex flex-col gap-5 items-center">
-          {!isDelete? <Deletebutton /> :""}
-          {isDelete? <Deleteconfirmbutton /> :""}
-          {isDelete? <Deletecancelbutton   /> :""}
+          <Deletebutton />
         </div>
       </div>
     </div>
   );
 }
+
+
