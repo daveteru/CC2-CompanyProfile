@@ -1,11 +1,7 @@
-import { useEditBlogStore } from "@/store/store";
 import Createbutton from "./Createbutton";
 import Deletebutton from "./Deletebutton";
-import Editbutton from "./Editbutton";
 
 export default function Blogeditor() {
-  const {isDelete} = useEditBlogStore();
-
 
   return (
     <div className="container mx-auto md:px-40">
