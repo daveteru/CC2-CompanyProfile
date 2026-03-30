@@ -1,7 +1,5 @@
 import Blogs_content from "./Blogs_content";
 import Blogs_hero from "./Blogs_hero";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { axiosInstance } from "../lib/axios";
 
@@ -30,11 +28,9 @@ export default function Blogs() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
+    <>
       <Blogs_hero />
       <Blogs_content blogs={blogs} loading={loading} />
-      <Footer  />
-    </div>
+    </>
   );
 }

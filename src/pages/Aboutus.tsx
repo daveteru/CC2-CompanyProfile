@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Aboutus_culture from "./Aboutus_culture";
 import Aboutus_gallery from "./Aboutus_gallery";
 import Aboutus_hero from "./Aboutus_hero";
@@ -14,14 +12,12 @@ export default function Aboutus() {
 
 
   return (
-    <div>
-      <Navbar/>
+    <>
       <Aboutus_hero/>
       <Aboutus_story/>
       <Aboutus_team/>
       <Aboutus_culture/>
       <Aboutus_gallery/>
-      <Footer/>
-    </div>
+    </>
   );
 }

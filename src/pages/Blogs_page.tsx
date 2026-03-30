@@ -2,8 +2,6 @@ import { axiosInstance } from "../lib/axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import Button1 from "../components/Button1";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Blogs_hero from "./Blogs_hero";
 import Editbutton from "@/components/Editbutton";
 import { useAuth } from "@/store/store";
@@ -32,7 +30,6 @@ export default function Blogs_page() {
   const {role} = useAuth();
   return (
     <div className="bg-red-400">
-      <Navbar />
       <Blogs_hero />
       <div className="flex h-fit justify-center bg-red-400 py-10"> </div>
       <div className="h-fit w-screen rounded-t-[100px] bg-white md:rounded-t-[150px]">
@@ -74,7 +71,6 @@ export default function Blogs_page() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

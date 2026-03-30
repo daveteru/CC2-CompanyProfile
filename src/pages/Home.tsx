@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import Contact_whatsapp from "../components/Contact_whatsapp";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Home_hero from "./Home_hero";
 import Home_overview from "./Home_overview";
 import Home_story from "./Home_story";
@@ -14,8 +12,7 @@ export default function Home() {
     window.scrollTo({ top: 0 });
   }, []);
   return (
-    <div>
-      <Navbar />
+    <>
       <Home_hero />
       <Home_story />
       <Home_USP />
@@ -23,7 +20,6 @@ export default function Home() {
       <Home_testimonial />
       <Contact_whatsapp />
       <Map/>
-      <Footer />
-    </div>
+    </>
   );
 }

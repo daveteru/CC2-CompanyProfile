@@ -7,18 +7,57 @@ export default function Createblogmodule() {
   const [title, setTitle] = useState<string>("");
   const [author, setAuthor] = useState<string>("");
   const [quote, setQuote] = useState<string>("");
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string>("");
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [isUploading, setIsUploading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setImageFile(file);
+    setImagePreview(URL.createObjectURL(file));
+  };
+
+  const uploadImage = async (file: File): Promise<string> => {
+    const formData = new FormData();
+    formData.append("upload", file);
+    const fileName = `${Date.now()}_${file.name}`;
+    setIsUploading(true);
+    setUploadProgress(0);
+    try {
+      const res = await axiosInstance.post(
+        `/files/blog-thumbnails/${fileName}?overwrite=true`,
+        formData,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+          onUploadProgress: ({ loaded, total }) => {
+            if (total) setUploadProgress(Math.round((loaded * 100) / total));
+          },
+        }
+      );
+      return res.data.fileURL as string;
+    } finally {
+      setIsUploading(false);
+    }
+  };
 
   const handleSubmit = async () => {
     if (!body || !title || !author) return alert("all form must be filled");
     try {
       setIsLoading(true);
+      let thumbnail = "";
+      if (imageFile) {
+        thumbnail = await uploadImage(imageFile);
+      }
       await axiosInstance.post("/data/Blogcucu", {
         title: title,
         author: author,
         bodytext: body,
         quote: quote,
+        thumbnail: thumbnail,
       });
       alert("Successfully submitted a blog");
       navigate("/blogs");
@@ -69,6 +108,42 @@ export default function Createblogmodule() {
                 className="border  border-gray-400 rounded-md w-full h-10 p-5"
               ></input>
             </div>
+          </div>
+          <div className="mt-5 flex flex-col gap-2">
+            <label htmlFor="thumbnail" className="text-md font-[inter]">
+              Article Header Image
+            </label>
+            <label
+              htmlFor="thumbnail"
+              className="w-fit cursor-pointer rounded-2xl border-4 border-[#5E1D3F] bg-[#A83271] px-6 py-2 text-sm font-bold text-white drop-shadow-[0px_4px_0px_rgba(94,29,63,1)] transition-all active:translate-y-1 active:drop-shadow-none"
+            >
+              Choose Image
+            </label>
+            <input
+              type="file"
+              id="thumbnail"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="hidden"
+            />
+            {isUploading && (
+              <div className="mt-1">
+                <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
+                  <div
+                    className="h-full bg-red-400 transition-all duration-200"
+                    style={{ width: `${uploadProgress}%` }}
+                  />
+                </div>
+                <p className="mt-1 text-xs text-gray-500">{uploadProgress}%</p>
+              </div>
+            )}
+            {imagePreview && (
+              <img
+                src={imagePreview}
+                alt="preview"
+                className="h-48 w-full rounded-md object-cover"
+              />
+            )}
           </div>
           <label
             htmlFor="pass"

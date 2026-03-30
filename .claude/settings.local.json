@@ -3,7 +3,12 @@
     "allow": [
       "Bash(cd \"/Users/teru/Library/Mobile Documents/com~apple~CloudDocs/_Purwadhika/Class Exercises/modul-2/CodeChallenge/Company Profile/CC2-CompanyProfile\" && npm run build 2>&1)",
       "Bash(npm uninstall:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(/usr/bin/python3 ~/.config/claude-usage/fetch_usage.py)",
+      "Bash(/usr/bin/python3 -c \":*)",
+      "Bash(/usr/bin/python3 -m json.tool)",
+      "Bash(/usr/bin/python3 ~/.config/claude-usage/refresh_session.py)",
+      "Bash(/usr/bin/python3 -c \"import json; d=json.load\\(open\\(''$HOME/.config/claude-usage/config.json''\\)\\); k=d[''sessionKey'']; print\\(f''{k[:25]}...{k[-15:]}''\\)\")"
     ]
   }
 }
